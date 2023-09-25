@@ -15,8 +15,9 @@ public class CursoController {
     private CursoRepository cursoRepository;
 
     @GetMapping("/testCursos")
-    public String getCurso(){
-        Curso curso=new Curso("Java","Rios",Dia.LUNES,Turno.MAÑANA);    
+    public String getTestCurso(){
+        Curso curso=new Curso("PHP","Rosalez",Dia.LUNES,Turno.MAÑANA);    
+        System.out.println("*********************************************************");
         cursoRepository.save(curso);
         System.out.println(curso);
         System.out.println("*********************************************************");
